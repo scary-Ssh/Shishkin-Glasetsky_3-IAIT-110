@@ -8,7 +8,7 @@ QueueHandle_t xLuxQueue;
 const TickType_t xDelay200ms = pdMS_TO_TICKS(200);
 
 const int cal_adc[] = {0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1023};
-const float cal_lux[] = {0, 5, 20, 50, 150, 300, 500, 800, 1200, 1800, 2500};
+const float cal_lux[] = {0.0, 10.0, 60.0, 150.0, 300.0, 500.0, 800.0, 1200.0, 1600.0, 2200.0, 2500.0};
 const int cal_size = 11;
 
 float interpolateLux(int adc) {
@@ -47,5 +47,6 @@ void setup() {
         Serial.println("Ошибка создания очереди!");
     }
 }
+
 
 void loop() {}
